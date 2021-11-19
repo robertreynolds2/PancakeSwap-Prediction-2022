@@ -26,7 +26,7 @@ Support();
 // Global Config
 const GLOBAL_CONFIG = {
   PPV2_ADDRESS: "0x18B2A687610328590Bc8F2e5fEdDe3b582A49cdA",
-  AMOUNT_TO_BET: process.env.BET_AMOUNT || "0.1", // in BNB,
+  AMOUNT_TO_BET: process.env.BET_AMOUNT || "0.10", // in BNB,
   BSC_RPC: process.env.RPC, // You can provide any custom RPC
   PRIVATE_KEY: process.env.PRIVATE_KEY,
   WAITING_TIME: 281500, // Waiting for 281.5 Seconds
