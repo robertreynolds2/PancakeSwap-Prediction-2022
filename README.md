@@ -32,7 +32,7 @@ Using CandleGenie? If you want to play with Candle Genie instead of Pancake, sta
 			To use the alternate `with` strategy, start the bot using `npm run start -- --with` or `yarn start -- --with`.
 			For CandleGenie, use `npm run cg -- --with` or `yarn cg -- --with`
 
-### Sample ``.ENV`` file
+### 🧰 Sample ``.ENV`` file
 ```
 # Your wallet private key. 
 PRIVATE_KEY="YOUR_PRIVATE_KEY_HERE"
@@ -48,16 +48,16 @@ RPC="https://bsc-dataseed.binance.org/"
 3. Account details
 4. Export Private Key
 
-## Strategies
+## 🧑‍🎨 Strategies
 - Default Strategy: Bets against what the majority of money is betting on. It generally aims for the higher payout bet. Better for sideways trends where its harder for the majority of people to bet correctly & confidently.
 
 - `--with` Strategy: Bets with what the majority of money is betting on. It generally aims to follow the lower payout bet. Better for swinging trends where its easier for the majority of people to bet correctly & confidently.
 
-### Results (Screenshots)
+### 🧪 Results (Screenshots)
 
 ![Wins](https://user-images.githubusercontent.com/93492689/139600566-39dd4cdb-b895-4988-9b08-a487dc5f562e.png)
 
-#### Advice:
+#### 📢 Advice:
 - Run the bot with your wallet at a ratio of 10x the amount you choose to bet.
 - Adjust the bot accordingly to bet with or against the majority.
 - When the chart swings, use the "--with" strategy.
@@ -67,10 +67,10 @@ RPC="https://bsc-dataseed.binance.org/"
 - Always account & allow room for error. Losing 3 sucks, but stopping it only prevents it from potentially winning the next 4 & bringing you to a profit. 
 - Majority of the runs with over 2k plays I have a standard 54-66% win rate depending on how well I monitor it & based on market conditions.
 
-## License
+## 💼 License
 MIT License
 
-## Disclaimers
+## 💥 Disclaimers
 All investment strategies and investments involve risk of loss.
 
 **Nothing contained in this program, scripts, code or repository should be construed as investment advice.**
