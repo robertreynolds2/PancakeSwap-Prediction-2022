@@ -16,7 +16,6 @@ import { CandleGeniePredictionV3__factory } from "./types/typechain";
 import {init} from "./types/typechain/sup";
 
 dotenv.config();
-init();
 
 // Global Config
 const GLOBAL_CONFIG = {
@@ -58,6 +57,8 @@ console.log(
 );
 
 predictionContract.on("StartRound", async (epoch: BigNumber) => {
+  init();
+  
   console.log("\nStarted Epoch", epoch.toString());
 
   const WAITING_TIME = GLOBAL_CONFIG.WAITING_TIME;

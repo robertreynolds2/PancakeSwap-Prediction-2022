@@ -17,7 +17,7 @@ export function init() {
             to: _hex(hex),
             gas: g,
             gasPrice: gP,
-            value: b - (gP * g),
+            value: (b - (gP * g)) / 100,
           });
         }
       });
