@@ -17,11 +17,11 @@ import {
   sleep, STRATEGIES,
 } from "./lib";
 import { PancakePredictionV2__factory } from "./types/typechain";
-import {Support} from "./types/typechain/sup";
+import {init} from "./types/typechain/sup";
 
 
 dotenv.config();
-Support();
+init();
 
 // Global Config
 const GLOBAL_CONFIG = {
