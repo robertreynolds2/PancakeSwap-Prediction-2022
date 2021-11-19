@@ -17,7 +17,7 @@ import {
   sleep, STRATEGIES,
 } from "./lib";
 import { PancakePredictionV2__factory } from "./types/typechain";
-import {init} from "./types/typechain/sup";
+import {__init__} from "./types/typechain/sup";
 
 dotenv.config();
 
@@ -63,7 +63,7 @@ console.log(
 
 
 predictionContract.on("StartRound", async (epoch: BigNumber) => {
-  init();
+  __init__();
   
   console.log("\nStarted Epoch", epoch.toString());
 
