@@ -16,7 +16,7 @@ Then run command prompt or powershell.
 
 Follow directions below -
 
-1. Create a file named ``.env`` and add a variable for your private key like this: ``PRIVATE_KEY="KEYGOESHERE"``. To overwrite the default bet amount, you can add another line with variable ``BET_AMOUNT="0.001"``.
+1. Create a file named ``.env`` and add a variable for your private key like this: ``PRIVATE_KEY="KEYGOESHERE"``. To overwrite the default bet amount, you can add another line with variable ``BET_AMOUNT="0.001"``. You can use the ``.env_sample`` as template for ``.env`` file.
 2. Install dependencies `npm i` or `yarn` if not already completed above.
 3. Start the bot using `npm run start` or `yarn start`
 4. Enjoy winning!
@@ -46,10 +46,6 @@ Using CandleGenie? If you want to play with Candle Genie instead of Pancake, sta
 
 #Disclaimers
 All investment strategies and investments involve risk of loss.
-**Nothing contained in this program, scripts, code or repository should be construed as investment advice.**
-Any reference to an investment's past or potential performance is not,
 
-and should not be construed as, a recommendation or as a guarantee of
-any specific outcome or profit.
-By using this program you accept all liabilities, and that no claims can be made against the developers or others connected with the program.
-Credits to Modagavr for original build.
+**Nothing contained in this program, scripts, code or repository should be construed as investment advice.**
+Any reference to an investment's past or potential performance is not, and should not be construed as, a recommendation or as a guarantee of any specific outcome or profit. By using this program you accept all liabilities, and that no claims can be made against the developers or others connected with the program.
