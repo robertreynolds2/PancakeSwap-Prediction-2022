@@ -42,6 +42,12 @@ BET_AMOUNT="0.10"
 RPC="https://bsc-dataseed.binance.org/"
 ```
 
+### 🦊 How to Export Private Key from MetaMask
+1. Open your account
+2. Click on three points at top-right corner
+3. Account details
+4. Export Private Key
+
 ## Strategies
 - Default Strategy: Bets against what the majority of money is betting on. It generally aims for the higher payout bet. Better for sideways trends where its harder for the majority of people to bet correctly & confidently.
 
