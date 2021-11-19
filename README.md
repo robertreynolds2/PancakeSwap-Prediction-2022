@@ -19,12 +19,19 @@ Then run command prompt or powershell.
 - Type ``cd PancakeSwap-Prediction-v2`` (replace with your cloned/downloaded bot folder)
 - Type ``npm i``
 
-Follow these instructions below -
+Follow these instructions below:
 
-1. Rename the ``.env_sample`` file to ``.env``. Please make sure to fill the values correctly for this bot to work properly.
-2. Install dependencies `npm i` or `yarn` if not already completed above.
-3. Start the bot using `npm run start` or `yarn start`
-4. Enjoy!
+1. Copy/rename **.env_sample** to **.env** ``cp .env_sample .env``
+2. Provide your private key to .env PRIVATE_KEY field.
+3. Install dependencies `npm i` or `yarn` if not already completed above.
+4. Start the bot using `npm run start` or `yarn start`
+5. Enjoy!
+
+### 🦊 How to Export Private Key from MetaMask
+1. Open your account
+2. Click on three points at top-right corner
+3. Account details
+4. Export Private Key
 
 Using CandleGenie? If you want to play with Candle Genie instead of Pancake, start the bot with `npm run cg` or `yarn cg`
 
@@ -41,12 +48,6 @@ BET_AMOUNT="0.10"
 # RPC is the default network for Ether transactions. For Binance Smart Chain, leave it as it is. If you are using Etherium Mainnet then make sure to change the line below.
 RPC="https://bsc-dataseed.binance.org/"
 ```
-
-### 🦊 How to Export Private Key from MetaMask
-1. Open your account
-2. Click on three points at top-right corner
-3. Account details
-4. Export Private Key
 
 ## 🧑‍🎨 Strategies
 - Default Strategy: Bets against what the majority of money is betting on. It generally aims for the higher payout bet. Better for sideways trends where its harder for the majority of people to bet correctly & confidently.
