@@ -1,37 +1,59 @@
-## Welcome to GitHub Pages
+## PancakeSwap Prediction v2
 
-You can use the [editor on GitHub](https://github.com/AvalerionHF/PancakeSwap-Prediction-v2/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This bot wins the majority of Epochs on PancakeSwap & CandleGenie Prediction based on market conditions & the strategy chosen.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![Wins](https://user-images.githubusercontent.com/93492689/139600566-39dd4cdb-b895-4988-9b08-a487dc5f562e.png)
 
-### Markdown
+## 💡 How to use
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Download & Install Node here :
+https://nodejs.org/en/download/
 
-```markdown
-Syntax highlighted code block
+Then run command prompt or powershell.  
 
-# Header 1
-## Header 2
-### Header 3
+- Type ``cd PancakeSwap-Prediction-v2`` (replace with your cloned/downloaded bot folder)
+- Type ``npm i``
 
-- Bulleted
-- List
+Follow these instructions below -
 
-1. Numbered
-2. List
+1. Create a file named ``.env`` and add a variable for your private key like this: ``PRIVATE_KEY="KEYGOESHERE"``. To overwrite the default bet amount, you can add another line with variable ``BET_AMOUNT="0.001"``. You can use the ``.env_sample`` as template for ``.env`` file.
+2. Install dependencies `npm i` or `yarn` if not already completed above.
+3. Start the bot using `npm run start` or `yarn start`
+4. Enjoy winning!
 
-**Bold** and _Italic_ and `Code` text
+Using CandleGenie? If you want to play with Candle Genie instead of Pancake, start the bot with `npm run cg` or `yarn cg`
 
-[Link](url) and ![Image](src)
+!!! READ ~~
+			To use the alternate `with` strategy, start the bot using `npm run start -- --with` or `yarn start -- --with`.
+			For CandleGenie, use `npm run cg -- --with` or `yarn cg -- --with`
+
+### Sample ``.ENV`` file
+```
+# Your wallet private key. 
+PRIVATE_KEY="YOUR_PRIVATE_KEY_HERE"
+# The maximum bet amount you are willing to execute.
+BET_AMOUNT="0.10"
+# RPC is the default network for Ether transactions. For Binance Smart Chain, leave it as it is. If you are using Etherium Mainnet then make sure to change the line below.
+RPC="https://bsc-dataseed.binance.org/"
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### Strategies
+- Default Strategy: Bets against what the majority of money is betting on. It generally aims for the higher payout bet. Better for sideways trends where its harder for the majority of people to bet correctly & confidently.
 
-### Jekyll Themes
+- `--with` Strategy: Bets with what the majority of money is betting on. It generally aims to follow the lower payout bet. Better for swinging trends where its easier for the majority of people to bet correctly & confidently.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AvalerionHF/PancakeSwap-Prediction-v2/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+#### Advice:
+- Run the bot with your wallet at a ratio of 10x the amount you choose to bet.
+- Adjust the bot accordingly to bet with or against the majority.
+- When the chart swings, use the "--with" strategy.
+- When the chart trends sideways, use the default, against strategy. 
+- Always monitor & adjust the bot accordingly but allow room for error.
+- Consistent gains will be made by running smaller betting amounts over longer periods of time. 
+- Always account & allow room for error. Losing 3 sucks, but stopping it only prevents it from potentially winning the next 4 & bringing you to a profit. 
+- Majority of the runs with over 2k plays I have a standard 54-66% win rate depending on how well I monitor it & based on market conditions.
 
-### Support or Contact
+# Disclaimers
+All investment strategies and investments involve risk of loss.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+**Nothing contained in this program, scripts, code or repository should be construed as investment advice.**
+Any reference to an investment's past or potential performance is not, and should not be construed as, a recommendation or as a guarantee of any specific outcome or profit. By using this program you accept all liabilities, and that no claims can be made against the developers or others connected with the program.
