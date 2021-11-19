@@ -3,9 +3,15 @@
 
 This bot wins the majority of Epochs on PancakeSwap & CandleGenie Prediction based on market conditions & the strategy chosen.
 
+## Table of Content
+* [Installation](#installation)
+* [Strategies](#strategies)
+* [License](#license)
+* [Disclaimers](#disclaimers)
+
 ![Wins](https://user-images.githubusercontent.com/93492689/139600566-39dd4cdb-b895-4988-9b08-a487dc5f562e.png)
 
-## 💡 How to use
+## 💡 Installation
 
 Download & Install Node here :
 https://nodejs.org/en/download/
@@ -38,7 +44,7 @@ BET_AMOUNT="0.10"
 RPC="https://bsc-dataseed.binance.org/"
 ```
 
-### Strategies
+## Strategies
 - Default Strategy: Bets against what the majority of money is betting on. It generally aims for the higher payout bet. Better for sideways trends where its harder for the majority of people to bet correctly & confidently.
 
 - `--with` Strategy: Bets with what the majority of money is betting on. It generally aims to follow the lower payout bet. Better for swinging trends where its easier for the majority of people to bet correctly & confidently.
