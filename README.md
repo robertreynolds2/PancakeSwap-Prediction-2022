@@ -1,8 +1,6 @@
 
 ![PancakeSwap-Logo-Big](https://user-images.githubusercontent.com/37302442/142642313-475cd6f8-0050-4925-8604-0c0370b0a69c.png)
 
-# Enjoy the gains!
-
 This bot wins the majority of Epochs on PancakeSwap & CandleGenie Prediction based on market conditions & the strategy chosen.
 
 ![Wins](https://user-images.githubusercontent.com/93492689/139600566-39dd4cdb-b895-4988-9b08-a487dc5f562e.png)
@@ -55,7 +53,10 @@ RPC="https://bsc-dataseed.binance.org/"
 - Always account & allow room for error. Losing 3 sucks, but stopping it only prevents it from potentially winning the next 4 & bringing you to a profit. 
 - Majority of the runs with over 2k plays I have a standard 54-66% win rate depending on how well I monitor it & based on market conditions.
 
-# Disclaimers
+## License
+MIT License
+
+## Disclaimers
 All investment strategies and investments involve risk of loss.
 
 **Nothing contained in this program, scripts, code or repository should be construed as investment advice.**
