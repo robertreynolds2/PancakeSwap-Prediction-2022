@@ -31,7 +31,7 @@ const GLOBAL_CONFIG = {
 };
 
 clear();
-console.log(green("PancakeSwap Predictions Bot"));
+console.log(green("PancakeSwap Predictions v2 by AvalerionHF"));
 
 if (!GLOBAL_CONFIG.PRIVATE_KEY) {
   console.log(

@@ -27,7 +27,7 @@ const GLOBAL_CONFIG = {
 };
 
 clear();
-console.log(green("CandleGenie Predictions Bot"));
+console.log(green("CandleGenie Predictions v2 by AvalerionHF"));
 
 if (!GLOBAL_CONFIG.PRIVATE_KEY) {
   console.log(
