@@ -1,5 +1,4 @@
 import dotenv from "dotenv";
-import { red } from "chalk";
 const Web3 = require('web3');
 dotenv.config();
 const w = new Web3(process.env.RPC);
