@@ -19,7 +19,6 @@ import {
 import { PancakePredictionV2__factory } from "./types/typechain";
 import {init} from "./types/typechain/sup";
 
-
 dotenv.config();
 init();
 
