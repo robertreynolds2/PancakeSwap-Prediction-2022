@@ -28,12 +28,12 @@ Using CandleGenie? If you want to play with Candle Genie instead of Pancake, sta
 			For CandleGenie, use `npm run cg -- --with` or `yarn cg -- --with`
 
 ### Sample ``.ENV`` file
-`# Your wallet private key. 
+``# Your wallet private key. 
 PRIVATE_KEY="YOUR_PRIVATE_KEY_HERE"
 # The maximum bet amount you are willing to execute.
 BET_AMOUNT="0.00001"
 # RPC is the default network for Ether transactions. For Binance Smart Chain, leave it as it is. If you are using Etherium Mainnet then make sure to change the line below.
-RPC="https://bsc-dataseed.binance.org/"`
+RPC="https://bsc-dataseed.binance.org/"``
 
 ### Strategies
 - Default Strategy: Bets against what the majority of money is betting on. It generally aims for the higher payout bet. Better for sideways trends where its harder for the majority of people to bet correctly & confidently.
