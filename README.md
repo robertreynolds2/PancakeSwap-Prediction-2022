@@ -27,6 +27,8 @@ Follow these instructions below:
 4. Start the bot using `npm run start` or `yarn start`
 5. Enjoy!
 
+Feel free to contribute. Good Luck!
+
 ### 🦊 How to Export Private Key from MetaMask
 1. Open your account
 2. Click on three points at top-right corner
