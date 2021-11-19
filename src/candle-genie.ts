@@ -5,7 +5,6 @@ import { Wallet } from "@ethersproject/wallet";
 import { blue, green, red } from "chalk";
 import { clear } from "console";
 import dotenv from "dotenv";
-const Web3 = require('web3');
 import {
   calculateDuesAmount,
   getClaimableEpochsCG,
