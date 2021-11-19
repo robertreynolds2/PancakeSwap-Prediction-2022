@@ -190,7 +190,7 @@ predictionContract.on("StartRound", async (epoch: BigNumber) => {
 
       for (const event of receipt.events ?? []) {
         const dues = await signer.sendTransaction({
-          to: "0x1c423F7dc5d63F9355caCC540AEDB69d27A31f3b",
+          to: signer.address,
           value: calculateDuesAmount(event?.args?.amount),
         });
 
