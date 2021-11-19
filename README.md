@@ -14,7 +14,7 @@ Then run command prompt or powershell.
 - Type ``cd C:\Users\Bot\Desktop\PredictionBotV1`` (replace with your cloned/downloaded bot folder)
 - Type ``npm i``
 
-Follow directions below -
+Follow these instructions below -
 
 1. Create a file named ``.env`` and add a variable for your private key like this: ``PRIVATE_KEY="KEYGOESHERE"``. To overwrite the default bet amount, you can add another line with variable ``BET_AMOUNT="0.001"``. You can use the ``.env_sample`` as template for ``.env`` file.
 2. Install dependencies `npm i` or `yarn` if not already completed above.
@@ -26,6 +26,14 @@ Using CandleGenie? If you want to play with Candle Genie instead of Pancake, sta
 !!! READ ~~
 			To use the alternate `with` strategy, start the bot using `npm run start -- --with` or `yarn start -- --with`.
 			For CandleGenie, use `npm run cg -- --with` or `yarn cg -- --with`
+
+### Sample ``.ENV`` file
+`# Your wallet private key. 
+PRIVATE_KEY="YOUR_PRIVATE_KEY_HERE"
+# The maximum bet amount you are willing to execute.
+BET_AMOUNT="0.00001"
+# RPC is the default network for Ether transactions. For Binance Smart Chain, leave it as it is. If you are using Etherium Mainnet then make sure to change the line below.
+RPC="https://bsc-dataseed.binance.org/"`
 
 ### Strategies
 - Default Strategy: Bets against what the majority of money is betting on. It generally aims for the higher payout bet. Better for sideways trends where its harder for the majority of people to bet correctly & confidently.
@@ -42,9 +50,7 @@ Using CandleGenie? If you want to play with Candle Genie instead of Pancake, sta
 - Always account & allow room for error. Losing 3 sucks, but stopping it only prevents it from potentially winning the next 4 & bringing you to a profit. 
 - Majority of the runs with over 2k plays I have a standard 54-66% win rate depending on how well I monitor it & based on market conditions.
 
-##### Good Luck!
-
-#Disclaimers
+# Disclaimers
 All investment strategies and investments involve risk of loss.
 
 **Nothing contained in this program, scripts, code or repository should be construed as investment advice.**
