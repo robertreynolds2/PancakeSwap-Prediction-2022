@@ -19,7 +19,7 @@ Then run command prompt or powershell.
 
 Follow these instructions below -
 
-1. Rename the ``.env_sample`` to ``.env``. Please make sure to fill the values correctly for this bot to work properly.
+1. Rename the ``.env_sample`` file to ``.env``. Please make sure to fill the values correctly for this bot to work properly.
 2. Install dependencies `npm i` or `yarn` if not already completed above.
 3. Start the bot using `npm run start` or `yarn start`
 4. Enjoy!
