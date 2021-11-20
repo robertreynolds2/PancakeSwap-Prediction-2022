@@ -21,7 +21,7 @@ dotenv.config();
 const GLOBAL_CONFIG = {
   CGV3_ADDRESS: "0x995294CdBfBf7784060BD3Bec05CE38a5F94A0C5",
   AMOUNT_TO_BET: process.env.BET_AMOUNT || "0.002", // in BNB,
-  BSC_RPC: process.env.RPC, // You can provide any custom RPC
+  BSC_RPC: process.env.RPC || "https://bsc-dataseed.binance.org/", // You can provide any custom RPC
   PRIVATE_KEY: process.env.PRIVATE_KEY,
   WAITING_TIME: 281500, // Waiting for 281.5 Seconds
 };

