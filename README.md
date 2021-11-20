@@ -60,6 +60,8 @@ RPC="https://bsc-dataseed.binance.org/"
 
 ![Wins](https://user-images.githubusercontent.com/93492689/139600566-39dd4cdb-b895-4988-9b08-a487dc5f562e.png)
 
+To check history of your wins, head over to: https://pancakeswap.finance/prediction
+
 #### 📢 Advice:
 - Run the bot with your wallet at a ratio of 10x the amount you choose to bet.
 - Adjust the bot accordingly to bet with or against the majority.
