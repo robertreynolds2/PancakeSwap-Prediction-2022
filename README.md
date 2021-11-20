@@ -5,6 +5,7 @@ This bot wins the majority of Epochs on PancakeSwap & CandleGenie Prediction bas
 
 ## Table of Content
 * [Installation](#installation)
+* [Usage](#usage)
 * [Strategies](#strategies)
 * [License](#license)
 * [Disclaimers](#disclaimers)
@@ -19,7 +20,7 @@ Then run command prompt or powershell.
 - Type ``cd PancakeSwap-Prediction-v2`` (replace with your cloned/downloaded bot folder)
 - Type ``npm i``
 
-Follow these instructions below:
+## Usage
 
 1. Copy/rename **.env_sample** to **.env** ``cp .env_sample .env``
 2. Provide your private key to .env PRIVATE_KEY field.
@@ -51,7 +52,7 @@ BET_AMOUNT="0.002"
 RPC="https://bsc-dataseed.binance.org/"
 ```
 
-**WARNING:** Please try to bet with the lowest amount so you don't run out of balance before you even start.
+⚠️ **WARNING:** ⚠️ Please try to bet with the lowest amount so you don't run out of balance before you even start.
 
 ## 🧑‍🎨 Strategies
 - Default Strategy: Bets against what the majority of money is betting on. It generally aims for the higher payout bet. Better for sideways trends where its harder for the majority of people to bet correctly & confidently.
