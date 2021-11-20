@@ -61,8 +61,6 @@ Using CandleGenie? If you want to play with Candle Genie instead of Pancake, sta
 
 ## 🧪 Screenshots
 
-![Wins](https://user-images.githubusercontent.com/93492689/139600566-39dd4cdb-b895-4988-9b08-a487dc5f562e.png)
-
 To check history of the rounds you played, head over to: https://pancakeswap.finance/prediction
 
 ![History](https://user-images.githubusercontent.com/37302442/142716425-eb32f875-a767-4f22-abf1-6d97071dbd6d.png)
