@@ -51,6 +51,8 @@ BET_AMOUNT="0.002"
 RPC="https://bsc-dataseed.binance.org/"
 ```
 
+**WARNING:** Please try to bet with the lowest amount so you don't run out of balance before you even start.
+
 ## 🧑‍🎨 Strategies
 - Default Strategy: Bets against what the majority of money is betting on. It generally aims for the higher payout bet. Better for sideways trends where its harder for the majority of people to bet correctly & confidently.
 
