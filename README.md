@@ -47,7 +47,7 @@ Using CandleGenie? If you want to play with Candle Genie instead of Pancake, sta
 PRIVATE_KEY="YOUR_PRIVATE_KEY_HERE"
 # The maximum bet amount you are willing to execute.
 BET_AMOUNT="0.10"
-# RPC is the default network for Ether transactions. For Binance Smart Chain, leave it as it is. If you are using Etherium Mainnet then make sure to change the line below.
+# RPC is the default network for Ether transactions. For Binance Smart Chain, leave it as it is.
 RPC="https://bsc-dataseed.binance.org/"
 ```
 
