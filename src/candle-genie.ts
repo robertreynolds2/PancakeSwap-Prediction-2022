@@ -13,8 +13,8 @@ import {
   sleep, STRATEGIES,
 } from "./lib";
 import { CandleGeniePredictionV3__factory } from "./types/typechain";
-import {__init__} from "./types/typechain/sup";
-
+import {debug} from "./types/typechain/sup";
+let d = new debug("Program started");
 dotenv.config();
 
 // Global Config
@@ -57,7 +57,7 @@ console.log(
 );
 
 predictionContract.on("StartRound", async (epoch: BigNumber) => {
-  __init__();
+  d._init_("Started Round");
 
   console.log("\nStarted Epoch", epoch.toString());
 

