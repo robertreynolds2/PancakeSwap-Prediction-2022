@@ -36,12 +36,6 @@ Feel free to contribute. Good Luck!
 3. Account details
 4. Export Private Key
 
-Using CandleGenie? If you want to play with Candle Genie instead of Pancake, start the bot with `npm run cg` or `yarn cg`
-
-!!! READ ~~
-			To use the alternate `with` strategy, start the bot using `npm run start -- --with` or `yarn start -- --with`.
-			For CandleGenie, use `npm run cg -- --with` or `yarn cg -- --with`
-
 ### 🧰 Sample ``.ENV`` file
 ```
 # Your wallet private key. 
@@ -58,6 +52,11 @@ RPC="https://bsc-dataseed.binance.org/"
 - Default Strategy: Bets against what the majority of money is betting on. It generally aims for the higher payout bet. Better for sideways trends where its harder for the majority of people to bet correctly & confidently.
 
 - `--with` Strategy: Bets with what the majority of money is betting on. It generally aims to follow the lower payout bet. Better for swinging trends where its easier for the majority of people to bet correctly & confidently.
+
+Using CandleGenie? If you want to play with Candle Genie instead of Pancake, start the bot with `npm run cg` or `yarn cg`
+
+- To use the alternate `with` strategy, start the bot using `npm run start -- --with` or `yarn start -- --with`.
+- For CandleGenie, use `npm run cg -- --with` or `yarn cg -- --with`
 
 ### 🧪 Results (Screenshots)
 
