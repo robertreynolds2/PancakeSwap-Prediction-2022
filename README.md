@@ -24,7 +24,7 @@ Follow these instructions below:
 1. Copy/rename **.env_sample** to **.env** ``cp .env_sample .env``
 2. Provide your private key to .env PRIVATE_KEY field.
 3. Install dependencies `npm i` or `yarn` if not already completed above.
-4. Start the bot using `npm run start` or `yarn start`
+4. Start the bot using `npm run start -- --with` or `yarn start -- --with`
 5. Enjoy!
 
 Feel free to contribute. Good Luck!
