@@ -65,7 +65,7 @@ To check history of the rounds you played, head over to: https://pancakeswap.fin
 
 Running this bot for a day had made me $55 with minimum bets. Please note I was actively monitoring the market as the bot was running.
 
-![History_2](https://user-images.githubusercontent.com/37302442/142724356-e3785615-6328-46bc-a7d6-74415f531398.PNG)
+![History_2](https://user-images.githubusercontent.com/37302442/142724413-a85f290c-e7a4-4b52-9ac0-491feb864d57.PNG)
 
 #### 📢 Advice:
 - Run the bot with your wallet at a ratio of 10x the amount you choose to bet.
