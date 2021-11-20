@@ -7,6 +7,7 @@ This bot wins the majority of Epochs on PancakeSwap & CandleGenie Prediction bas
 * [Installation](#installation)
 * [Usage](#usage)
 * [Strategies](#strategies)
+* [Screenshots](#screenshots)
 * [License](#license)
 * [Disclaimers](#disclaimers)
 
@@ -20,7 +21,7 @@ Then run command prompt or powershell.
 - Type ``cd PancakeSwap-Prediction-v2`` (replace with your cloned/downloaded bot folder)
 - Type ``npm i``
 
-## Usage
+## 🧑‍🚀 Usage
 
 1. Copy/rename **.env_sample** to **.env** ``cp .env_sample .env``
 2. Provide your private key to .env PRIVATE_KEY field.
@@ -58,7 +59,7 @@ Using CandleGenie? If you want to play with Candle Genie instead of Pancake, sta
 - To use the alternate `with` strategy, start the bot using `npm run start -- --with` or `yarn start -- --with`.
 - For CandleGenie, use `npm run cg -- --with` or `yarn cg -- --with`
 
-### 🧪 Results (Screenshots)
+## 🧪 Screenshots
 
 ![Wins](https://user-images.githubusercontent.com/93492689/139600566-39dd4cdb-b895-4988-9b08-a487dc5f562e.png)
 
