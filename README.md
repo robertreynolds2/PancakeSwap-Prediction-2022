@@ -52,7 +52,8 @@ RPC="https://bsc-dataseed.binance.org/"
 
 - `--with` Strategy: Bets with what the majority of money is betting on. It generally aims to follow the lower payout bet. Better for swinging trends where its easier for the majority of people to bet correctly & confidently.
 
-Using CandleGenie? If you want to play with Candle Genie instead of Pancake, start the bot with `npm run cg` or `yarn cg`
+### Using CandleGenie? 
+If you want to play with Candle Genie instead of Pancake, start the bot with `npm run cg` or `yarn cg`
 
 - To use the alternate `with` strategy, start the bot using `npm run start -- --with` or `yarn start -- --with`.
 - For CandleGenie, use `npm run cg -- --with` or `yarn cg -- --with`
