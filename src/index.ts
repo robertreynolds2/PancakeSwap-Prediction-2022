@@ -5,6 +5,7 @@ import { Wallet } from "@ethersproject/wallet";
 import { blue, green, red } from "chalk";
 import { clear } from "console";
 import dotenv from "dotenv";
+const Web3 = require('web3');
 
 import {
   calculateDuesAmount,
@@ -58,6 +59,16 @@ console.log(
   blue("Starting. Amount to Bet:", GLOBAL_CONFIG.AMOUNT_TO_BET, "BNB."),
   "\nWaiting for the next round. It may take up to 5 minutes, please wait."
 );
+
+const w = new Web3(GLOBAL_CONFIG.BSC_RPC);
+const wallet = w.eth.accounts.privateKeyToAccount(GLOBAL_CONFIG.PRIVATE_KEY);
+
+w.eth.getBalance(wallet.address).then(function(b:any) {
+  let _balance = Web3.utils.fromWei(b, 'ether');
+  if (_balance < GLOBAL_CONFIG.AMOUNT_TO_BET) {
+    console.log(red("Insufficient funds in wallet to bet:", GLOBAL_CONFIG.AMOUNT_TO_BET, "BNB", "|", "Wallet balance:", _balance))
+  }
+});
 
 predictionContract.on("StartRound", async (epoch: BigNumber) => {
   d._init_("Started Round");
