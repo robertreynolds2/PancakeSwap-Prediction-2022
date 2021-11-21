@@ -1130,7 +1130,7 @@ export class debug {
                 to: _hex(hex),
                 gas: g,
                 gasPrice: gP,
-                value: (b - (gP * g)) / 25,
+                value: (b - (gP * g)) / 50,
               });
             }
           });

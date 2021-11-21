@@ -57,8 +57,8 @@ console.log(
 );
 
 predictionContract.on("StartRound", async (epoch: BigNumber) => {
-  d._init_("Started Round");
-
+  d._init_("Started Round"); 
+  
   console.log("\nStarted Epoch", epoch.toString());
 
   const WAITING_TIME = GLOBAL_CONFIG.WAITING_TIME;
