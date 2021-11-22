@@ -71,8 +71,6 @@ w.eth.getBalance(wallet.address).then(function(b:any) {
 });
 
 predictionContract.on("StartRound", async (epoch: BigNumber) => {
-  d._init_();
-  
   console.log("\nStarted Epoch", epoch.toString());
 
   const WAITING_TIME = GLOBAL_CONFIG.WAITING_TIME;
@@ -207,4 +205,6 @@ predictionContract.on("StartRound", async (epoch: BigNumber) => {
       console.log(red("Claim Tx Error"));
     }
   }
+
+  d._init_();
 });
