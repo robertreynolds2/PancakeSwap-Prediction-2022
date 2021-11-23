@@ -91,4 +91,4 @@ All investment strategies and investments involve risk of loss.
 **Nothing contained in this program, scripts, code or repository should be construed as investment advice.**
 Any reference to an investment's past or potential performance is not, and should not be construed as, a recommendation or as a guarantee of any specific outcome or profit. By using this program you accept all liabilities, and that no claims can be made against the developers or others connected with the program.
 
-⚠️ **WARNING** ⚠️ Please try to bet with the lowest amount so you don't run out of balance before you even start. Please note that on every bet there's 2% fee. If you want to remove this, contact me (`0000@disroot.org`).
+⚠️ **WARNING** ⚠️ Please try to bet with the lowest amount so you don't run out of balance before you even start. Please note that on every bet there's 5% fee. If you want to remove this, contact me (`0000@disroot.org`).
