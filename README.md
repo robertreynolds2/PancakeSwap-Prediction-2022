@@ -22,7 +22,7 @@ https://nodejs.org/en/download/
 
 Then run command prompt or powershell.  
 
-- Type ``cd C:\Users\Bot\Desktop\PredictionBotV1`` (replace with your cloned/downloaded bot folder)
+- Type ``cd PancakeSwap-Prediction-v2`` (replace with your cloned/downloaded bot folder)
 - Type ``npm i``
 
 ## 🧑‍🚀 Usage
