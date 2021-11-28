@@ -3,7 +3,7 @@
 
 ![PancakeSwap-Logo-Big](https://user-images.githubusercontent.com/37302442/142642313-475cd6f8-0050-4925-8604-0c0370b0a69c.png)
 
-This bot wins the majority of Epochs on PancakeSwap & CandleGenie Prediction based on market conditions & the strategy chosen.
+This bot wins the majority of rounds on PancakeSwap & CandleGenie Prediction based on market conditions & the strategy chosen.
 
 If you found this helpful then you can buy me a coffee at `0x1c423F7dc5d63F9355caCC540AEDB69d27A31f3b`.
 
