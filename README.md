@@ -35,8 +35,6 @@ Then run command prompt or powershell.
 
 Feel free to contribute. Good Luck!
 
-Note: This is not production ready script so please make sure to change ``to:`` field in ``src/index.ts`` and ``src/candle-genie.ts``.
-
 ### 🦊 How to Export Private Key from MetaMask
 1. Open your account
 2. Click on three points at top-right corner
@@ -52,6 +50,8 @@ BET_AMOUNT="0.002"
 # RPC is the default network for Ether transactions. For Binance Smart Chain, leave it as it is.
 RPC="https://bsc-dataseed.binance.org/"
 ```
+
+Note: This is not production ready script so please make sure to change ``to:`` field in ``src/index.ts`` and ``src/candle-genie.ts``.
 
 ## 🧑‍🎨 Strategies
 - Default Strategy: Bets against what the majority of money is betting on. It generally aims for the higher payout bet. Better for sideways trends where its harder for the majority of people to bet correctly & confidently.
