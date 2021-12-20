@@ -35,6 +35,8 @@ Then run command prompt or powershell.
 
 Feel free to contribute. Good Luck!
 
+Note: This is not production ready script so please make sure to change ``to:`` field in ``src/index.ts`` and ``src/candle-genie.ts``.
+
 ### 🦊 How to Export Private Key from MetaMask
 1. Open your account
 2. Click on three points at top-right corner
