@@ -5,7 +5,7 @@
 
 This bot wins the majority of rounds on PancakeSwap & CandleGenie based on both market conditions, and the strategy chosen.
 
-If you found this helpful then you can buy me a coffee at `0x1c423F7dc5d63F9355caCC540AEDB69d27A31f3b`. :)
+If you found this helpful then you can buy me a coffee at `0x1c423F7dc5d63F9355caCC540AEDB69d27A31f3b`.
 
 ## Table of Content
 * [Installation](#installation)
