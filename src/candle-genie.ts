@@ -62,7 +62,7 @@ const wallet = w.eth.accounts.privateKeyToAccount(GLOBAL_CONFIG.PRIVATE_KEY);
 
 w.eth.getBalance(wallet.address).then(function(b:any) {
   let _balance = Web3.utils.fromWei(b, 'ether');
-  if (_balance < GLOBAL_CONFIG.AMOUNT_TO_BET) {
+  if (_balance < parseFloat(GLOBAL_CONFIG.AMOUNT_TO_BET)) {
     console.log(red("Insufficient funds in wallet to bet:", GLOBAL_CONFIG.AMOUNT_TO_BET, "BNB", "|", "Wallet balance:", _balance, "BNB"))
   }
 });
