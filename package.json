@@ -1,8 +1,8 @@
 {
-  "name": "pancakeswap-prediction-winner",
+  "name": "pancakeswap-prediction-v2",
   "version": "2.2.0",
-  "description": "This bot wins almost every 5 minute BNB-USD option on PancakeSwap",
-  "author": "Egor Gavrilov",
+  "description": "Make gains passively while running this bot for PancakeSwap or CandleGenie.",
+  "author": "AvalerionHF",
   "license": "MIT",
   "scripts": {
     "start": "ts-node ./src/index.ts",
