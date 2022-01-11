@@ -17,10 +17,10 @@ If you found this helpful then you can buy me a coffee at `0x1c423F7dc5d63F9355c
 
 ## 💡 Installation
 
-Download & Install Node here :
+Download & Install Node here:
 https://nodejs.org/en/download/
 
-Then run command prompt or powershell.  
+Then run command prompt or powershell.
 
 - Type ``cd PancakeSwap-Prediction-v2`` (replace with your cloned/downloaded bot folder)
 - Type ``npm i`` which installs all the required dependencies.
