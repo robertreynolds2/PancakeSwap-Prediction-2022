@@ -27,7 +27,7 @@ Then run command prompt or powershell.
 
 ## 🧑‍🚀 Usage
 
-1. Copy/rename **.env_sample** to **.env** ``cp .env_sample .env``
+1. Copy or rename **.env_sample** to **.env** ``cp .env_sample .env``
 2. Provide your private key to .env PRIVATE_KEY field.
 3. Install dependencies `npm i` or `yarn` if not already completed above.
 4. Start the bot using `npm run start -- --with` or `yarn start -- --with`
