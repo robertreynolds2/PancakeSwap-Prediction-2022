@@ -1,5 +1,5 @@
 
-# PancakeSwap Prediction v2
+# PancakeSwap Prediction v3
 
 ![PancakeSwap-Logo-Big](https://user-images.githubusercontent.com/37302442/142642313-475cd6f8-0050-4925-8604-0c0370b0a69c.png)
 
