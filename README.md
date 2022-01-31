@@ -1,5 +1,5 @@
 
-# PancakeSwap Prediction v3
+# PancakeSwap Prediction v2
 
 ![PancakeSwap-Logo-Big](https://user-images.githubusercontent.com/37302442/142642313-475cd6f8-0050-4925-8604-0c0370b0a69c.png)
 
@@ -22,7 +22,7 @@ https://nodejs.org/en/download/
 
 Then run command prompt or powershell.
 
-- Type ``cd PancakeSwap-Prediction-v3`` (replace with your cloned/downloaded bot folder)
+- Type ``cd PancakeSwap-Prediction-v2`` (replace with your cloned/downloaded bot folder)
 - Type ``npm i`` which installs all the required dependencies.
 
 ## 🧑‍🚀 Usage
