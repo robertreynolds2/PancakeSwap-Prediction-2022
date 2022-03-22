@@ -7,7 +7,7 @@ This bot wins majority of rounds on PancakeSwap & CandleGenie based on both mark
 
 If you found this helpful then you can buy me a coffee at `0x1c423F7dc5d63F9355caCC540AEDB69d27A31f3b`.
 
-**WARNING:** Please note most of the pancakeswap bots on Github are copy of this repo. Please be careful and make sure to review the source code as they can be used to steal your private keys.
+**WARNING:** Please note most of the pancakeswap bots on Github are copy of this repo. Please be careful and make sure to review the source code as they can be used to steal your private key.
 
 ## Table of Content
 * [Installation](#installation)
